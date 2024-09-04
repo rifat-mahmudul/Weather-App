@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <!-- -------tailwind cdn------- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                clifford: '#da373d',
+            }
+            }
+        }
+    }
+    </script>
+
+</head>
+<body class="bg-[#08085784]">
+
+    <div class="max-w-[90%] sm:max-w-[500px] mx-auto text-center flex flex-col justify-center items-center h-[100vh]">
+        
+        <div class="w-full bg-gradient-to-r from-teal-700 via-teal-600 to-gray-500 rounded-2xl p-4">
+            <img src="image/weather.png" alt="" width="25%" class="mx-auto animate-pulse">
+            <h1 class="text-3xl font-bold">Let's Cheak Weather in your City</h1>
+
+            <input type="text" name="weather" id="weatherInput" placeholder="Enter your city" class="w-full mt-4 px-5 py-3 text-xl rounded-lg bg-transparent border-2 border-gray-600">
+
+            <button class="bg-gradient-to-r from-cyan-600 to-gray-500 text-xl mt-5 p-3 rounded-3xl font-bold hover:bg-gradient-to- hover:from-gray-500 hover:to-cyan-600" onclick="cheackWather()">Cheak Weather</button>
+
+            <div class="w-full" id="weatherInfo">
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
